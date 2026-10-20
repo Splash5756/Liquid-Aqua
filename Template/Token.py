@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from re import Pattern
 from Template.LexerMode import Mode
+from Template.StrPointer import Pointer
 
 @dataclass
 class TokenDef:
@@ -17,7 +18,7 @@ class TokenDef:
     Priority:int
     Mode:bytearray|str|Mode
     Emit:bool
-    ANID:bytearray
+    ANID:bytes
 
 @dataclass
 class Token:
@@ -29,8 +30,8 @@ class Token:
     """
     Name:str
     Value:str
-    Pointers:tuple[str,str]
-    ANID:bytearray
+    Pointers:tuple[Pointer,Pointer]
+    ANID:bytes
 
 """
     if you read this you'll listen Duman(turkish rock group)

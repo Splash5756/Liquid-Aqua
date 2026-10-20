@@ -11,3 +11,6 @@ class Pointer:
     x:int = 1
     y:int = 1
     raw:int = 0
+
+    def toStr(self):
+        return f"x:{self.x}, y:{self.y}, raw:{self.raw}"
